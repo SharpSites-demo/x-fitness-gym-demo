@@ -1,0 +1,14 @@
+name: Release reviewed SharpSites website
+on:
+  push:
+    branches: [gh-pages]
+    paths: [.github/workflows/publish-reviewed-gumloop1.yml]
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  publish:
+    uses: SharpSites-demo/shakshi-banquet-hall-najafgarh-demo/.github/workflows/release-reviewed-html.yml@d658dfe3614f663c8d726a546e6fe1bfacf745e5
+    with:
+      expected_sha256: 3d32335f03102926f1aa8da7b91af06878cd383ae118eb0410c145c9ab105792
